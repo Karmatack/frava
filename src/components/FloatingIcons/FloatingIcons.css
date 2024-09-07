@@ -1,0 +1,42 @@
+#whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  #whatsapp-icon img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s;
+  }
+  
+  #whatsapp-icon img:hover {
+    transform: scale(1.1);
+  }
+  
+  #gmail-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 110px;
+    z-index: 1000;
+  }
+  
+  #gmail-icon img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s;
+  }
+  
+  #gmail-icon img:hover {
+    transform: scale(1.1);
+  }
+
+  #icon {
+    display: inline-block;
+    padding-top: 0.7em;
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
