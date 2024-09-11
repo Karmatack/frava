@@ -13,17 +13,17 @@ body {
   
   nav {
     position: fixed;
-    width: calc(100% - 300px); /* Ajusta la anchura basada en la barra de desplazamiento */
+    width: calc(100% - 300px); 
     top: 0;
     z-index: 3;
-    left: 300px; /* Alinea el contenido nav correctamente */
+    left: 300px; 
     
     ul {
       padding: 0;
       margin: 0;
       list-style-type: none;
       display: flex;
-      justify-content: flex-end; /* Alinea los elementos a la derecha */
+      justify-content: flex-end; 
     }
   
     li {
@@ -71,7 +71,7 @@ body {
     height: 450px;
     display: flex;
     align-items: center;
-    overflow: hidden; /* Asegúrate de que el video no se salga del header */
+    overflow: hidden;
   
     .video-background {
       position: absolute;
@@ -90,17 +90,17 @@ body {
       width: 100vw;
       height: 100vw;
       transform: translate(-50%, -50%);
-      pointer-events: none; /* Evita la interacción del usuario con el video */
+      pointer-events: none;
     }
   
     .container {
-      display: flex; /* Para colocar los divs en la misma fila */
-      justify-content: space-between; /* Para separar los divs a los lados izquierdo y derecho */
+      display: flex;
+      justify-content: space-between;
       width: 100%;
       padding: 0 2em;
   
       .left-content {
-        flex: 1; /* Hace que el texto ocupe el espacio restante */
+        flex: 1;
         margin-right: 100px;
         h1 {
           font-size: 2.5em;
@@ -115,15 +115,15 @@ body {
       }
   
       .right-content {
-        flex: 1; /* Hace que la imagen ocupe el espacio restante */
+        flex: 1;
         display: flex;
-        justify-content: flex-end; /* Alinea la imagen a la derecha */
+        justify-content: flex-end;
         margin-left: 100px;
   
         img {
-          max-width: 100%; /* Ajusta el tamaño de la imagen al contenedor */
+          max-width: 100%; 
           height: auto;
-          border-radius: 8px; /* Opcional: redondea los bordes de la imagen */
+          border-radius: 8px;
         }
       }
     }
