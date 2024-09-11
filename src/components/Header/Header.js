@@ -30,11 +30,12 @@ function Header() {
         <div className="container">
           <div id="icon" className="fontawesome-cog"></div>
           <ul>
-            <li><Link to="/src/pages/Home/Home.js">Inicio</Link></li>
-            <li><Link to="/src/pages/About/About.js">¿Quiénes Somos?</Link></li>
-            <li><Link to="/src/pages/Services/Services.js">Servicios</Link></li>
-            <li><Link to="/src/pages/Clients/Clients.js">Clientes</Link></li>
-            <li><Link to="/src/pages/Contact/Contact.js">Contacto</Link></li>
+            {/* Cambiamos los enlaces para que apunten a las rutas correctas */}
+            <li><Link to="/">Inicio</Link></li>
+            <li><Link to="/about">¿Quiénes Somos?</Link></li>
+            <li><Link to="/services">Servicios</Link></li>
+            <li><Link to="/clients">Clientes</Link></li>
+            <li><Link to="/contact">Contacto</Link></li>
           </ul>
         </div>
       </nav>
