@@ -1,0 +1,13 @@
+.services-main {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;    /* Centra el contenido verticalmente */
+    height: 500px;          /* Fija la altura del main */
+    width: auto;            /* Ancho automático */
+    padding: 20px;
+  }
+  
+  .content {
+    text-align: center;     /* Centra el texto */
+  }
+  

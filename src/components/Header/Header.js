@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import imagdescript from "../../assets/background/fondoQuienesSomos.png"
 
@@ -12,12 +13,7 @@ function Header() {
       
       if (navBgElement && navElement) {
         const rect = navBgElement.getBoundingClientRect();
-        // Si el top del nav-bg está en la parte visible de la ventana, se activa el cambio
-        if (rect.top <= 0) {
-          setNavBackground(true);
-        } else {
-          setNavBackground(false);
-        }
+        setNavBackground(rect.top <= 0);
       }
     };
 
@@ -34,11 +30,11 @@ function Header() {
         <div className="container">
           <div id="icon" className="fontawesome-cog"></div>
           <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/about">¿Quiénes Somos?</a></li>
-            <li><a href="/services">Servicios</a></li>
-            <li><a href="/clients">Clientes</a></li>
-            <li><a href="/contact">Contacto</a></li>
+            <li><Link to="/src/pages/Home/Home.js">Inicio</Link></li>
+            <li><Link to="/src/pages/About/About.js">¿Quiénes Somos?</Link></li>
+            <li><Link to="/src/pages/Services/Services.js">Servicios</Link></li>
+            <li><Link to="/src/pages/Clients/Clients.js">Clientes</Link></li>
+            <li><Link to="/src/pages/Contact/Contact.js">Contacto</Link></li>
           </ul>
         </div>
       </nav>
@@ -51,20 +47,20 @@ function Header() {
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen
-            title="Video de fondo"
+            title="Video de fondo de Grupo FraVa"
           />
         </div>
         <div className="container" id="home">
           <div className="left-content">
             <h1>Tu socio estratégico en asesoría contable</h1>
             <p>
-            En Grupo FraVa, trabajamos de la mano contigo para impulsar el crecimiento de tu empresa, ofreciendo
-                  soluciones contables, tributarias, laborales y financieras personalizadas y de alta calidad. Juntos,
-                  alcanzamos tus metas.
+              En Grupo FraVa, trabajamos de la mano contigo para impulsar el crecimiento de tu empresa, ofreciendo
+              soluciones contables, tributarias, laborales y financieras personalizadas y de alta calidad. Juntos,
+              alcanzamos tus metas.
             </p>
           </div>
           <div className="right-content">
-          <img src={imagdescript} alt="Descripción de la imagen" />
+            <img src={imagdescript} alt="Imagen descriptiva del equipo de Grupo FraVa" />
           </div>
         </div>
       </header>
