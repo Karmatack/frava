@@ -6,7 +6,8 @@ function Contact() {
   return (
     <>
       <main>
-        <h2>Rellena el formulario y un asesor se comunicará contigo</h2>
+      <h2 className="text-center mx-auto w-full">Rellena el formulario y un asesor se comunicará contigo</h2>
+
         <section className="form_wrap">
 
           <section className="cantact_info">
@@ -40,7 +41,7 @@ function Contact() {
           </form>
 
         </section>
-        <h3>Ubicación</h3>
+        <h2 className="text-center mx-auto w-full">Ubícanos en :</h2>
         <Map />
       </main>
     </>
