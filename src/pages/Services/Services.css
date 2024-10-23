@@ -1,13 +1,7 @@
-.services-main {
-    display: flex;
-    justify-content: center; 
-    align-items: center;    
-    height: 500px;         
-    width: auto;           
-    padding: 20px;
-  }
-  
-  .content {
-    text-align: center;    
-  }
-  
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
