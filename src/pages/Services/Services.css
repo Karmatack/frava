@@ -5,3 +5,12 @@ img {
 img:hover {
   transform: scale(1.05);
 }
+/* Estilo general para todo el texto */
+main {
+  color: black;
+}
+
+/* Mantener el color del texto del botón en blanco */
+button {
+  color: white;
+}
