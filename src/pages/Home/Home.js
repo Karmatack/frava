@@ -1,123 +1,126 @@
-import React from 'react';
-import './Home.css';
-
+import React, { useEffect } from 'react';
 import logo1 from '../../assets/companylogo/logo1.png';
 import logo2 from '../../assets/companylogo/logo2.png';
 import logo3 from '../../assets/companylogo/logo3.png';
 import logo4 from '../../assets/companylogo/logo4.png';
 import logo5 from '../../assets/companylogo/logo5.png';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Home() {
+  // Inicializamos AOS para las animaciones de scroll
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <main>
       {/* Sección "Sobre nosotros" */}
-      <section id="about">
-        <div className="container">
-          <h2>Sobre nosotros</h2>
-          <div className="cards">
-            <div className="card">
-              <h3>Experiencia</h3>
-              <p>Contamos con un equipo de expertos con amplia experiencia en contabilidad y finanzas.</p>
+      <section id="about" className="py-20 text-center">
+        <div className="container mx-auto" data-aos="fade-up">
+          <h2 className="text-4xl font-bold mb-12 text-gray-800">Sobre nosotros</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:-translate-y-2">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Experiencia</h3>
+              <p className="text-lg text-gray-600">
+                Contamos con un equipo de expertos con amplia experiencia en contabilidad y finanzas.
+              </p>
             </div>
-            <div className="card">
-              <h3>Compromiso</h3>
-              <p>Nos comprometemos a brindar un servicio personalizado y de alta calidad a nuestros clientes.</p>
+            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:-translate-y-2">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Compromiso</h3>
+              <p className="text-lg text-gray-600">
+                Nos comprometemos a brindar un servicio personalizado y de alta calidad a nuestros clientes.
+              </p>
             </div>
-            <div className="card">
-              <h3>Confianza</h3>
-              <p>Construimos relaciones duraderas basadas en la confianza y la transparencia.</p>
+            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:-translate-y-2">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Confianza</h3>
+              <p className="text-lg text-gray-600">
+                Construimos relaciones duraderas basadas en la confianza y la transparencia.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Sección "Servicios" */}
-      <section id="services">
-        <div className="container">
-          <div id="fondo">
-            <h2>Servicios que ofrecemos</h2>
-            <div className="cards">
-              <div className="card">
-                <h3>Contabilidad</h3>
-                <p>Contabilidad general</p>
-                <p>Contabilidad de costos</p>
-                <p>Contabilidad financiera</p>
-              </div>
-              <div className="card">
-                <h3>Impuestos</h3>
-                <p>Declaración de impuestos</p>
-                <p>Planificación fiscal</p>
-                <p>Asesoría fiscal</p>
-              </div>
-              <div className="card">
-                <h3>Auditoría</h3>
-                <p>Auditoría financiera</p>
-                <p>Auditoría interna</p>
-                <p>Revisión de estados financieros</p>
-              </div>
+      <section id="services" className="py-20 text-center bg-gray-50">
+        <div className="container mx-auto" data-aos="fade-up">
+          <h2 className="text-4xl font-bold mb-12 text-gray-800">Servicios que ofrecemos</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Contabilidad</h3>
+              <p className="text-lg text-gray-600">Contabilidad general</p>
+              <p className="text-lg text-gray-600">Contabilidad de costos</p>
+              <p className="text-lg text-gray-600">Contabilidad financiera</p>
             </div>
+            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Impuestos</h3>
+              <p className="text-lg text-gray-600">Declaración de impuestos</p>
+              <p className="text-lg text-gray-600">Planificación fiscal</p>
+              <p className="text-lg text-gray-600">Asesoría fiscal</p>
+            </div>
+            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Auditoría</h3>
+              <p className="text-lg text-gray-600">Auditoría financiera</p>
+              <p className="text-lg text-gray-600">Auditoría interna</p>
+              <p className="text-lg text-gray-600">Revisión de estados financieros</p>
+            </div>
+          </div>
 
-            <h2 id="abc">Áreas de especialización</h2>
-            <div className="cards">
-              <div className="card">
-                <h3>Empresas en general</h3>
-                <p>Brindamos soluciones personalizadas para el crecimiento y la gestión financiera de las PYMES.</p>
-              </div>
-              <div className="card">
-                <h3>Comercio electrónico</h3>
-                <p>Apoyamos a empresas online con la gestión de sus operaciones y la optimización fiscal.</p>
-              </div>
-              <div className="card">
-                <h3>Organizaciones sin fines de lucro</h3>
-                <p>Ayudamos a las ONG a cumplir con sus obligaciones contables y fiscales.</p>
-              </div>
-              <div className="card">
-                <h3>Profesionales independientes</h3>
-                <p>Ofrecemos soluciones contables y fiscales para autónomos y profesionales.</p>
-              </div>
+          <h2 className="text-4xl font-bold mt-16 mb-12 text-gray-800">Áreas de especialización</h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105" data-aos="zoom-in">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Empresas en general</h3>
+              <p className="text-lg text-gray-600">
+                Brindamos soluciones personalizadas para el crecimiento y la gestión financiera de las PYMES.
+              </p>
+            </div>
+            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105" data-aos="zoom-in" data-aos-delay="100">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Comercio electrónico</h3>
+              <p className="text-lg text-gray-600">
+                Apoyamos a empresas online con la gestión de sus operaciones y la optimización fiscal.
+              </p>
+            </div>
+            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Organizaciones sin fines de lucro</h3>
+              <p className="text-lg text-gray-600">
+                Ayudamos a las ONG a cumplir con sus obligaciones contables y fiscales.
+              </p>
+            </div>
+            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105" data-aos="zoom-in" data-aos-delay="300">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Profesionales independientes</h3>
+              <p className="text-lg text-gray-600">
+                Ofrecemos soluciones contables y fiscales para autónomos y profesionales.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Sección "Clientes" */}
-      <section id="clients">
-        <div className="container">
-          <h2>Clientes</h2>
-          <div className="client-slider">
-            <div className="slide-track">
-              <div className="slide">
-              <img src={logo1} alt="Cliente 1" />
-              </div>
-              <div className="slide">
-              <img src={logo2} alt="Cliente 2" />
-              </div>
-              <div className="slide">
-              <img src={logo3} alt="Cliente 3" />
-              </div>
-              <div className="slide">
-              <img src={logo4} alt="Cliente 4" />
-              </div>
-              <div className="slide">
-              <img src={logo5} alt="Cliente 5" />
-              </div>
-              {/* Duplicamos el contenido para crear un efecto de carrusel continuo */}
-              <div className="slide">
-              <img src={logo1} alt="Cliente 1" />
-              </div>
-              <div className="slide">
-              <img src={logo2} alt="Cliente 2" />
-              </div>
-              <div className="slide">
-              <img src={logo3} alt="Cliente 3" />
-              </div>
-              <div className="slide">
-              <img src={logo4} alt="Cliente 4" />
-              </div>
-              <div className="slide">
-              <img src={logo5} alt="Cliente 5" />
-              </div>
+      <section id="clients" className="py-20 bg-gray-100">
+        <div className="container mx-auto text-center" data-aos="fade-up">
+          <h2 className="text-4xl font-bold mb-12 text-gray-800">Clientes</h2>
+          <div className="overflow-hidden relative w-full">
+            <div className="flex w-[200%] animate-scroll">
+              {[logo1, logo2, logo3, logo4, logo5].map((logo, index) => (
+                <div key={index} className="mx-4">
+                  <img
+                    src={logo}
+                    alt={`Cliente ${index + 1}`}
+                    className="w-48 h-24 object-contain transition-transform hover:scale-110"
+                  />
+                </div>
+              ))}
+              {[logo1, logo2, logo3, logo4, logo5].map((logo, index) => (
+                <div key={index + 5} className="mx-4">
+                  <img
+                    src={logo}
+                    alt={`Cliente ${index + 1}`}
+                    className="w-48 h-24 object-contain transition-transform hover:scale-110"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
