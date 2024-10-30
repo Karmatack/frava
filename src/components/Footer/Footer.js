@@ -1,79 +1,43 @@
 import React from "react";
-import "./Footer.css";
-
 import logofrava from '../../assets/logofrava/logoFrava.jpg';
 import location from '../../assets/svg/location.png';
 import phone from '../../assets/svg/phone.png';
 import whatsapp from '../../assets/svg/whatsapp.svg';
-import mail from '../../assets/svg/gmail.svg';
-
 import facebook from '../../assets/svg/facebook.svg';
 import linkedin from '../../assets/svg/linkedin.svg';
 
 function Footer() {
   return (
-    <footer id="footer">
-      <div className="footer-wrapper">
-        <div className="footer-content">
-          <div className="footer-brand"> 
-          <img src={logofrava} alt="Grupo FraVa" />
-            <p>
-              Estamos comprometidos en ofrecer soluciones de calidad en asesoría
-              contable, tributaria, laboral y financiera.
-            </p>
+    <footer className="bg-gray-800 text-white py-10">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:space-x-10 px-10"> {/* Añadido padding */}
+        
+        {/* Brand Section */}
+        <div className="flex flex-col items-center mb-6 md:mb-0">
+          <img src={logofrava} alt="Grupo FraVa" className="w-40 h-auto mb-4" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:ml-10 lg:ml-20"> {/* Ajustes aquí */}
+          {/* Contact Section */}
+          <div className="text-center md:text-left">
+            <h2 className="text-lg font-bold mb-3">SOBRE NOSOTROS</h2>
+            <div className="bg-gray-700 p-4 rounded-md">
+              <p className="text-sm leading-relaxed">
+                Estamos comprometidos en ofrecer soluciones de calidad en asesoría contable, tributaria, laboral y financiera.
+              </p>
+            </div>
           </div>
-          <div className="footer-contact">
-            <h3>CONTÁCTANOS</h3>
-            <ul>
-              <li>
-              <img src={location} alt="Ubicación" />
-                
-                <strong>Oficina:</strong> Calle #, Nro. #, Urb. #, Carabayllo,
-                Lima - Perú
-              </li>
-              <li>
-                <img src={phone} alt="teléfono"/>
-                <strong>Central Telefónica:</strong> (+51) ###-####
-              </li>
-              <li>
-              <img src={whatsapp} alt="whatsapp"/>
-                <strong>WhatsApp:</strong> 962414654
-              </li>
-              <li>
-              <img src={mail} alt="Correo"/>
-                <strong>Correo Electrónico:</strong> asesoriafrava@gmail.com
-              </li>
-            </ul>
-          </div>
-          <div className="footer-social">
-            <h3>SÍGUENOS</h3>
-            <ul>
-              <li>
-                <img src={facebook} alt="Facebook" />
-                <a
-                  href="https://www.facebook.com/CORPORACIONFRAVA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <img src={linkedin} alt="LinkedIn" />
-                <a
-                  href="https://www.linkedin.com/company/grupo-frava/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
+          <div className="text-center md:text-left">
+            <h2 className="text-lg font-bold mb-3">SÍGUENOS</h2>
+            <div className="flex justify-center md:justify-start space-x-4">
+              <img src={facebook} alt="Facebook" className="w-8 h-8" />
+              <img src={linkedin} alt="LinkedIn" className="w-8 h-8" />
+              <img src={location} alt="Ubicación" className="w-8 h-8" />
+              <img src={phone} alt="Teléfono" className="w-8 h-8" />
+            </div>
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
-        <p>&copy; 2024 GRUPO FRAVA | Todos los derechos reservados</p>
+      <div className="text-center mt-8 text-sm text-gray-400">
+        &copy; 2024 GRUPO FRAVA | Todos los derechos reservados
       </div>
     </footer>
   );
