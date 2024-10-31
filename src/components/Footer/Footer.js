@@ -5,6 +5,7 @@ import phone from '../../assets/svg/phone.png';
 import whatsapp from '../../assets/svg/whatsapp.svg';
 import facebook from '../../assets/svg/facebook.svg';
 import linkedin from '../../assets/svg/linkedin.svg';
+import gmail from '../../assets/svg/gmail.svg';
 
 function Footer() {
   return (
@@ -28,10 +29,20 @@ function Footer() {
           <div className="text-center md:text-left">
             <h2 className="text-lg font-bold mb-3">SÍGUENOS</h2>
             <div className="flex justify-center md:justify-start space-x-4">
-              <img src={facebook} alt="Facebook" className="w-8 h-8" />
-              <img src={linkedin} alt="LinkedIn" className="w-8 h-8" />
-              <img src={location} alt="Ubicación" className="w-8 h-8" />
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+                <img src={location} alt="Ubicación" className="w-8 h-8" />
+              </a>
               <img src={phone} alt="Teléfono" className="w-8 h-8" />
+              <img src={whatsapp} alt="Whatsapp" className="w-8 h-8" />
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=asesoriafrava@gmail.com" target="_blank" rel="noopener noreferrer">
+                <img src={gmail} alt="Gmail" className="w-8 h-8" />
+              </a>
+              <a href="https://www.facebook.com/CORPORACIONFRAVA" target="_blank" rel="noopener noreferrer">
+                <img src={facebook} alt="Facebook" className="w-8 h-8" />
+              </a>
+              <a href="https://www.linkedin.com/company/grupo-frava/?originalSubdomain=pe" target="_blank" rel="noopener noreferrer">
+                <img src={linkedin} alt="LinkedIn" className="w-8 h-8" />
+              </a>
             </div>
           </div>
         </div>
