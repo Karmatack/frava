@@ -42,7 +42,7 @@ function About() {
 
         {/* Primer Profile y Text Box Section */}
         <section className="flex flex-col lg:flex-row justify-between items-center w-full max-w-5xl space-y-6 lg:space-y-0 lg:space-x-6 mt-12" data-aos="fade-up">
-          <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg w-full lg:w-1/4">
+          <div className="flex flex-col items-center   bg-white p-6 rounded-lg shadow-lg w-full lg:w-1/4">
             <img src={fotoFranzuet} alt="Franzuet Ramos" className="w-32 h-32 rounded-full mb-4 hover:scale-110 transition transform duration-300" />
             <div className="text-center">
               <h3 className="text-xl font-bold text-black">Franzuet Ramos</h3>
