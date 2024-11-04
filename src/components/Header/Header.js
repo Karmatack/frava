@@ -1,37 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+// Header.js
+import React from 'react';
 import './Header.css';
 import imagdescript from "../../assets/background/fondoQuienesSomos.png";
+import { useLocation } from 'react-router-dom';
 
 function Header() {
-  const [navBackground, setNavBackground] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    // Manejar el desplazamiento al hacer scroll
-    const handleScroll = () => {
-      const navBgElement = document.getElementById('nav-bg');
-      const navElement = document.querySelector('nav');
-      
-      if (navBgElement && navElement) {
-        const rect = navBgElement.getBoundingClientRect();
-        setNavBackground(rect.top <= 0);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // Desplazar hacia arriba cuando la ruta cambia
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]); // Ejecuta este efecto cada vez que la ruta cambia
-
   let headerContent = { title: "", text: "", videoUrl: "" };
 
   switch (location.pathname) {
@@ -73,47 +47,27 @@ function Header() {
   }
 
   return (
-    <>
-      <nav className={navBackground ? 'scrolled' : ''}>
-        <div className="container">
-          <div id="icon" className="fontawesome-cog"></div>
-          <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-            &#9776; {/* Ícono de hamburguesa */}
-          </div>
-          <ul className={menuOpen ? 'menu open' : 'menu'}>
-            <li><Link to="/" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
-            <li><Link to="/about" onClick={() => setMenuOpen(false)}>¿Quiénes Somos?</Link></li>
-            <li><Link to="/services" onClick={() => setMenuOpen(false)}>Servicios</Link></li>
-            <li><Link to="/clients" onClick={() => setMenuOpen(false)}>Clientes</Link></li>
-            <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contacto</Link></li>
-          </ul>
+    <header>
+      <div className="video-background">
+        <iframe
+          id="background-video"
+          src={headerContent.videoUrl}  
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          title="Video de fondo de Grupo FraVa"
+        />
+      </div>
+      <div className="container" id="home">
+        <div className="left-content">
+          <h1>{headerContent.title}</h1>
+          <p>{headerContent.text}</p>
         </div>
-      </nav>
-
-      <header>
-        <div className="video-background">
-          <iframe
-            id="background-video"
-            src={headerContent.videoUrl}  
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            title="Video de fondo de Grupo FraVa"
-          />
+        <div className="right-content">
+          <img src={imagdescript} alt="Imagen descriptiva del equipo de Grupo FraVa" />
         </div>
-        <div className="container" id="home">
-          <div className="left-content">
-            <h1>{headerContent.title}</h1>
-            <p>{headerContent.text}</p>
-          </div>
-          <div className="right-content">
-            <img src={imagdescript} alt="Imagen descriptiva del equipo de Grupo FraVa" />
-          </div>
-        </div>
-      </header>
-
-      <div id="nav-bg"></div>
-    </>
+      </div>
+    </header>
   );
 }
 
