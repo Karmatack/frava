@@ -23,13 +23,6 @@ function Header() {
         videoUrl: 'https://www.youtube.com/embed/841Aqh5vI3k?autoplay=1&mute=1&loop=1&playlist=841Aqh5vI3k&controls=0&showinfo=0&modestbranding=1' 
       };
       break;
-    case '/clients':
-      headerContent = {
-        title: 'Clientes',
-        text: 'Conoce a los clientes que confían en Grupo FraVa. Nuestra prioridad es brindar un servicio de calidad que supere sus expectativas.',
-        videoUrl: 'https://www.youtube.com/embed/841Aqh5vI3k?autoplay=1&mute=1&loop=1&playlist=841Aqh5vI3k&controls=0&showinfo=0&modestbranding=1' 
-      };
-      break;
     case '/contact':
       headerContent = {
         title: 'Contacto',

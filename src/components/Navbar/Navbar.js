@@ -44,7 +44,6 @@ function Navbar() {
             <li><Link to="/" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
             <li><Link to="/about" onClick={() => setMenuOpen(false)}>¿Quiénes Somos?</Link></li>
             <li><Link to="/services" onClick={() => setMenuOpen(false)}>Servicios</Link></li>
-            <li><Link to="/clients" onClick={() => setMenuOpen(false)}>Clientes</Link></li>
             <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contacto</Link></li>
           </ul>
         </div>
