@@ -1,39 +1,36 @@
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  color: #FFF;
-}
-
-.container {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #FFF;
+  }
+  
+  .container {
     max-width: 80em;
-    min-width: 60em;
     margin: 0 auto;
+    padding: 0 1em;
   }
   
   nav {
     position: fixed;
-    width: calc(100% - 300px); 
+    width: calc(100% - 300px);
     top: 0;
     z-index: 3;
-    left: 300px; 
+    left: 300px;
     
     ul {
       padding: 0;
       margin: 0;
       list-style-type: none;
       display: flex;
-      justify-content: flex-end; 
+      justify-content: flex-end;
+      flex-wrap: wrap;
     }
   
     li {
       padding: 1.5em;
       text-align: center;
       transition: all 0.2s;
-  
-      &:last-child {
-        padding-right: 0;
-      }
     }
   
     a {
@@ -56,7 +53,7 @@ body {
   }
   
   #nav-bg {
-    background: #222;
+    background: #1F2937;
     position: fixed;
     height: 5em;
     width: 100%;
@@ -96,12 +93,14 @@ body {
     .container {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       width: 100%;
       padding: 0 2em;
   
       .left-content {
         flex: 1;
-        margin-right: 100px;
+        margin-right: 2em;
+  
         h1 {
           font-size: 2.5em;
           text-transform: uppercase;
@@ -118,13 +117,141 @@ body {
         flex: 1;
         display: flex;
         justify-content: flex-end;
-        margin-left: 100px;
   
         img {
-          max-width: 100%; 
+          max-width: 100%;
           height: auto;
           border-radius: 8px;
         }
       }
     }
   }
+  
+  /* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+      padding: 4em 1em 3em;
+      height: auto;
+  
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .left-content {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+  
+        h1 {
+          font-size: 1.3em; /* Tamaño aún más pequeño para h1 */
+          line-height: 1.1; /* Ajuste de altura de línea */
+        }
+  
+        p {
+          font-size: 0.8em; /* Tamaño más pequeño para párrafos */
+          line-height: 1.4; /* Mejor espaciado entre líneas */
+        }
+      }
+  
+      .right-content {
+        display: none !important; /* Asegúrate de que la imagen se oculte */
+      }
+    }
+  }
+  
+  /* Media Queries para pantallas muy pequeñas (ej. móviles) */
+  @media (max-width: 480px) {
+    header {
+      padding: 2.5em 1em 2.5em;
+  
+      .left-content h1 {
+        font-size: 1.1em; /* Aún más pequeño en dispositivos muy pequeños */
+        line-height: 1.1;
+      }
+  
+      .left-content p {
+        font-size: 0.7em; /* Tamaño de párrafo aún más pequeño */
+        line-height: 1.3;
+      }
+    }
+  
+    nav ul {
+      padding: 0;
+    }
+  
+    nav li {
+      padding: 0.5em 0;
+    }
+  }
+
+
+  .menu-icon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #FFF;
+    position: absolute;
+    right: 10px; /* Separación de 10 px desde el lado derecho */
+    top: 0.7em; /* Ajusta la posición vertical */
+    z-index: 10; /* Asegura que esté por encima del resto del contenido */
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .menu.open {
+    display: block;
+    flex-direction: column;
+    background-color: #1F2937; /* Fondo del menú desplegable */
+    position: absolute;
+    top: 5em; /* Ajusta según la altura de tu nav */
+    right: 0; /* Hace que el menú se alinee al lado derecho */
+    width: 200px; /* Ajusta el ancho del menú */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    padding: 1em;
+    z-index: 9; /* Asegura que esté por encima del resto del contenido */
+  }
+  
+  .menu li {
+    margin: 0.5em 0; /* Espaciado entre elementos */
+  }
+  
+  .menu li a {
+    color: #FFF; /* Color del texto */
+    text-decoration: none;
+    font-size: 1.1em; /* Ajusta el tamaño de la fuente */
+    transition: color 0.3s;
+  }
+  
+  .menu li a:hover {
+    color: #BBB; /* Cambio de color al pasar el mouse */
+  }
+  
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .menu {
+      display: none;
+    }
+  
+    .menu.open {
+      display: block;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav li {
+      padding: 0.5em 0;
+    }
+  }
+
+  
