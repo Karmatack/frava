@@ -10,9 +10,9 @@ import gmail from '../../assets/svg/gmail.svg';
 function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-10 w-full">
-      <div className="w-full flex flex-col md:flex-row md:justify-between gap-10 px-4 md:px-10">
+      <div className="w-full flex flex-col md:flex-row md:justify-center gap-10 px-4 md:px-10">
         {/* Sección de la imagen de Grupo Frava */}
-        <div className="flex flex-col items-center md:items-start justify-center space-y-4 md:flex-1">
+        <div className="flex flex-col items-center justify-center space-y-4 md:flex-1">
           <img src={logofrava} alt="Grupo FraVa" className="w-40 h-auto md:w-48" />
           <div className="bg-gray-700 p-4 rounded-md text-center">
             <p className="text-sm leading-relaxed">
@@ -22,9 +22,9 @@ function Footer() {
         </div>
 
         {/* Sección de contacto */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 md:flex-1">
+        <div className="flex flex-col items-center text-center space-y-4 md:flex-1">
           <h2 className="text-lg font-bold">CONTÁCTANOS</h2>
-          <div className="flex flex-col items-center md:items-start space-y-3">
+          <div className="flex flex-col items-center space-y-3">
             <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-blue-400">
               <img src={location} alt="Ubicación" className="w-6 h-6" />
               <span>Calle #, Nro.#, Urb.#, Carabayllo, Lima-Peru</span>
@@ -45,9 +45,9 @@ function Footer() {
         </div>
 
         {/* Sección de redes sociales */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 md:flex-1">
+        <div className="flex flex-col items-center text-center space-y-4 md:flex-1">
           <h2 className="text-lg font-bold">SÍGUENOS</h2>
-          <div className="flex flex-col items-center md:items-start space-y-3">
+          <div className="flex flex-col items-center space-y-3">
             <a href="https://www.facebook.com/CORPORACIONFRAVA" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-blue-400">
               <img src={facebook} alt="Facebook" className="w-6 h-6" />
               <span>Facebook</span>
