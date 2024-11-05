@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import ClientsCarousel from '../../components/Carrousel/Carrousel'; // Asegúrate de que la ruta sea la correcta
+import ClientsCarousel from '../../components/Carrousel/Carrousel';
 
 function Home() {
   // Inicializamos AOS para las animaciones de scroll
@@ -95,6 +95,7 @@ function Home() {
 
       {/* Sección "Clientes" */}
       <section id="clients" className="py-20 bg-gray-100">
+        
         <ClientsCarousel />
       </section>
     </main>

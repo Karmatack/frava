@@ -1,42 +1,64 @@
 #whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-  }
-  
-  #whatsapp-icon img {
-    width: 60px;
-    height: auto;
-    transition: transform 0.3s;
-  }
-  
-  #whatsapp-icon img:hover {
-    transform: scale(1.1);
-  }
-  
-  #gmail-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 110px;
-    z-index: 1000;
-  }
-  
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#whatsapp-icon img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+#whatsapp-icon img:hover {
+  transform: scale(1.1);
+}
+
+#gmail-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 110px;
+  z-index: 1000;
+}
+
+#gmail-icon img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+#gmail-icon img:hover {
+  transform: scale(1.1);
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  #whatsapp-icon img,
   #gmail-icon img {
-    width: 60px;
-    height: auto;
-    transition: transform 0.3s;
-  }
-  
-  #gmail-icon img:hover {
-    transform: scale(1.1);
+      width: 45px; /* Tamaño reducido para pantallas más pequeñas */
   }
 
-  #icon {
-    display: inline-block;
-    padding-top: 0.7em;
-    font-size: 2em;
-    font-weight: 700;
-    text-transform: uppercase;
+  #whatsapp-icon {
+      right: 15px; /* Ajusta la posición en pantallas pequeñas */
   }
-  
+
+  #gmail-icon {
+      right: 75px; /* Ajusta la posición en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  #whatsapp-icon img,
+  #gmail-icon img {
+      width: 35px; /* Tamaño aún más reducido para pantallas muy pequeñas */
+  }
+
+  #whatsapp-icon {
+      right: 10px; /* Ajusta la posición en pantallas muy pequeñas */
+  }
+
+  #gmail-icon {
+      right: 55px; /* Ajusta la posición en pantallas muy pequeñas */
+  }
+}
