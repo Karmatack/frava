@@ -65,8 +65,6 @@ function About() {
           </div>
         </div>
       </section>
-
-      {/* Sección NUESTROS VALORES */}
       <section className="w-full max-w-5xl mt-12 text-center" data-aos="fade-up">
         <h2 className="text-2xl font-bold mb-6 text-center text-black">NUESTROS VALORES</h2>
         <div className="flex flex-wrap justify-center space-x-6 lg:space-x-16 border-2 border-transparent">
@@ -84,8 +82,6 @@ function About() {
           </div>
         </div>
       </section>
-
-      {/* Sección Conoce más de Nosotros */}
       <section className="w-full max-w-5xl mt-12 flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0" data-aos="fade-up">
         <div className="w-full lg:w-1/2 flex justify-start">
           <img src={frava} alt="Conoce más de Nosotros" className="w-3/4 lg:w-1/2 h-auto rounded-lg shadow-lg ml-16" />
@@ -98,7 +94,6 @@ function About() {
         </div>
       </section>
 
-      {/* Sección VIDEOS RELACIONADOS */}
 <section className="w-full max-w-5xl mt-12" data-aos="fade-up">
   <h2 className="text-2xl font-bold mb-4 text-center text-black">VIDEOS RELACIONADOS</h2>
   <div className="flex flex-col lg:flex-row justify-between space-y-6 lg:space-y-0 lg:space-x-6">
