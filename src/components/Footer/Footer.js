@@ -27,11 +27,11 @@ function Footer() {
           <div className="flex flex-col items-center space-y-3">
             <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-blue-400">
               <img src={location} alt="Ubicación" className="w-6 h-6" />
-              <span>Calle #, Nro.#, Urb.#, Carabayllo, Lima-Peru</span>
+              <span>Comas, Lima/Peru</span>
             </a>
             <div className="flex items-center space-x-2">
               <img src={phone} alt="Teléfono" className="w-6 h-6" />
-              <span>(+51) ###-###</span>
+              <span>(+51) 962414654</span>
             </div>
             <div className="flex items-center space-x-2">
               <img src={whatsapp} alt="Whatsapp" className="w-6 h-6" />
@@ -39,7 +39,7 @@ function Footer() {
             </div>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=asesoriafrava@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-blue-400">
               <img src={gmail} alt="Gmail" className="w-6 h-6" />
-              <span>asesoriafrava@gmail.com</span>
+              <span>gerencia@grupofrava.com</span>
             </a>
           </div>
         </div>

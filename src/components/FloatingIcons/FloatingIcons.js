@@ -12,13 +12,13 @@ function FloatingIcons() {
 
   const gmailLink = isMobileDevice()
     ? "mailto:asesoriafrava@gmail.com?subject=Consulta&body=Hola,%20me%20gustaría%20hacer%20una%20consulta%20sobre..."
-    : "https://mail.google.com/mail/?view=cm&fs=1&to=asesoriafrava@gmail.com&su=Consulta&body=Hola,%20me%20gustaría%20hacer%20una%20consulta%20sobre...";
+    : "https://mail.google.com/mail/?view=cm&fs=1&to=gerencia@grupofrava.com&su=Consulta&body=Hola,%20me%20gustaría%20hacer%20una%20consulta%20sobre...";
 
   const gmailTarget = isMobileDevice() ? "_self" : "_blank"; 
 
   return (
     <div>
-      <a href="https://wa.me/51902985139" target="_blank" rel="noopener noreferrer" id="whatsapp-icon">
+      <a href="https://wa.me/51962414654" target="_blank" rel="noopener noreferrer" id="whatsapp-icon">
         <img src={whatsapp} alt="WhatsApp" />
       </a>
       <a href={gmailLink} target={gmailTarget} rel="noopener noreferrer" id="gmail-icon">
