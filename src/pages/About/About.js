@@ -108,7 +108,7 @@ function About() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-      <p className="text-lg text-black text-center">Un recorrido por la historia y misión de Grupo Frava</p>
+      <p className="text-lg text-black text-center">"Un recorrido por la historia y misión de Grupo Frava"</p>
     </div>
     <div className="flex flex-col items-center w-full lg:w-1/2">
       <iframe
@@ -121,10 +121,39 @@ function About() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-      <p className="text-lg text-black text-center">Conoce más sobre nuestra experiencia</p>
+      <p className="text-lg text-black text-center">"Conoce más sobre nuestra experiencia"</p>
+    </div>
+  </div>
+  <div className="flex flex-col lg:flex-row justify-between space-y-6 lg:space-y-0 lg:space-x-6 mt-6">
+    <div className="flex flex-col items-center w-full lg:w-1/2">
+      <iframe
+        className="w-full aspect-video rounded-lg mb-2"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/rbvLbM8IDy4?si=7kmiibGm6hsu3Y-R&amp;start=7"
+        title="YouTube video"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+      <p className="text-lg text-black text-center">"Explicacion de Temas Relacionados""</p>
+    </div>
+    <div className="flex flex-col items-center w-full lg:w-1/2">
+      <iframe
+        className="w-full aspect-video rounded-lg mb-2"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/kzhyMS0s2vk?si=JteNKUHdLixHjSs2&amp;start=418" 
+        title="YouTube video"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+      <p className="text-lg text-black text-center">"Entrevista a nuestro Gerente General"</p>
     </div>
   </div>
 </section>
+
     </main>
   );
 }
