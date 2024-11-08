@@ -94,7 +94,7 @@ function Home() {
       </section>
 
       {/* Sección "Clientes" */}
-      <section id="clients" className="py-20 bg-gray-100">
+      <section id="clients" className="py-20 bg-white">
         
         <ClientsCarousel />
       </section>
