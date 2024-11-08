@@ -4,6 +4,10 @@ import './Header.css';
 import imagdescript from "../../assets/background/fondoQuienesSomos.png";
 import { useLocation } from 'react-router-dom';
 
+ // En la pag primero va el NavBar luego esto
+ // Sí es una parte del header pero es la parte que tiene el video y el texto
+ // me da flojera cambiar el nombre tampoco sé que ponerle xd
+
 function Header() {
   const location = useLocation();
   let headerContent = { title: "", text: "", videoUrl: "" };

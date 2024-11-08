@@ -19,7 +19,7 @@ function Home() {
             <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:-translate-y-2">
               <h3 className="text-2xl font-semibold mb-4 text-gray-800">Experiencia</h3>
               <p className="text-lg text-gray-600">
-                Contamos con un equipo de expertos con amplia experiencia en contabilidad y finanzas.
+                Contamos con un equipo de expertos con amplia experiencia en contabilidad, finanzas, laboral, tributario y administrativo.
               </p>
             </div>
             <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:-translate-y-2">
