@@ -42,9 +42,9 @@ function Navbar() {
           </div>
           <ul className={menuOpen ? 'menu open' : 'menu'}>
             <li><Link to="/" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
-            <li><Link to="/about" onClick={() => setMenuOpen(false)}>¿Quiénes Somos?</Link></li>
-            <li><Link to="/services" onClick={() => setMenuOpen(false)}>Servicios</Link></li>
-            <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contacto</Link></li>
+            <li><Link to="/nosotros" onClick={() => setMenuOpen(false)}>¿Quiénes Somos?</Link></li>
+            <li><Link to="/servicios-contables" onClick={() => setMenuOpen(false)}>Servicios</Link></li>
+            <li><Link to="/contacto" onClick={() => setMenuOpen(false)}>Contacto</Link></li>
           </ul>
         </div>
       </nav>

@@ -9,21 +9,21 @@ function Header() {
   let headerContent = { title: "", text: "", videoUrl: "" };
 
   switch (location.pathname) {
-    case '/about':
+    case '/nosotros':
       headerContent = {
         title: 'Sobre nosotros',
         text: 'Somos una empresa especializada en asesoría contable, laboral, tributaria y financiera, donde compartimos, escuchamos y valoramos las ideas de un equipo que se extiende más allá de nuestras oficinas, todo ello gracias al capital humano altamente calificado con el que contamos',
         videoUrl: 'https://www.youtube.com/embed/841Aqh5vI3k?autoplay=1&mute=1&loop=1&playlist=841Aqh5vI3k&controls=0&showinfo=0&modestbranding=1'  
       };
       break;
-    case '/services':
+    case '/servicios-contables':
       headerContent = {
         title: 'Nuestros Servicios',
         text: 'Ofrecemos asesoría contable, laboral, tributaria y financiera, enfocada en enfrentar fiscalizaciones tributarias con éxito. Proveemos información y documentación que garantiza el cumplimiento normativo, evitando riesgos de multas o embargos.',
         videoUrl: 'https://www.youtube.com/embed/841Aqh5vI3k?autoplay=1&mute=1&loop=1&playlist=841Aqh5vI3k&controls=0&showinfo=0&modestbranding=1' 
       };
       break;
-    case '/contact':
+    case '/contacto':
       headerContent = {
         title: 'Contacto',
         text: 'Ponte en contacto con nosotros. Estaremos encantados de responder a tus preguntas y ayudarte a alcanzar tus objetivos empresariales.',

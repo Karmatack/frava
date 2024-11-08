@@ -1,27 +1,29 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 
-import Navbar from './components/Navbar/Navbar';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import FloatingIcons from './components/FloatingIcons/FloatingIcons';
-import Home from './pages/Home/Home';  
-import About from './pages/About/About';  
-import Services from './pages/Services/Services';
-import Contact from './pages/Contact/Contact'; 
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import FloatingIcons from "./components/FloatingIcons";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Header />
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/nosotros" element={<About />} />
+        <Route path="/servicios-contables" element={<Services />} />
+        <Route path="/contacto" element={<Contact />} />
       </Routes>
+
       <Footer />
       <FloatingIcons />
     </Router>
