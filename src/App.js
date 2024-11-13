@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -22,6 +23,11 @@ function App() {
         <Route path="/nosotros" element={<About />} />
         <Route path="/servicios-contables" element={<Services />} />
         <Route path="/contacto" element={<Contact />} />
+
+        <Route path="*" element={<NotFound />} /> {/* Ruta 404 */}
+
+
+
       </Routes>
 
       <Footer />

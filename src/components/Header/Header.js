@@ -34,6 +34,7 @@ function Header() {
         videoUrl: 'https://www.youtube.com/embed/841Aqh5vI3k?autoplay=1&mute=1&loop=1&playlist=841Aqh5vI3k&controls=0&showinfo=0&modestbranding=1'
       };
       break;
+      
     default:  
       headerContent = {
         title: 'Tu socio estratégico en asesoría contable',

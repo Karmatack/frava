@@ -124,9 +124,9 @@ function Services() {
             </div>
           </div>
         ))}
-        <div className="flex justify-center w-full mt-6">
-          <a href="/contact">
-            <button className="bg-gradient-to-br from-[#1F2937] to-gray-800 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:from-gray-700 hover:to-[#1F2937] transition duration-300">
+        <div className="flex justify-center w-full mt-6 ">
+          <a href="/contacto">
+            <button className="bg-gradient-to-br from-[#1F2937] to-gray-800 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:from-gray-700 hover:to-[#1F2937] transition duration-300 mb-10">
               Contáctanos
             </button>
           </a>

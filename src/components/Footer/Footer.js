@@ -9,7 +9,7 @@ import gmail from '../../assets/svg/gmail.svg';
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-10 w-full mt-10">
+    <footer className="bg-gray-800 text-white py-10 w-full ">
       <div className="w-full flex flex-col md:flex-row md:justify-center gap-10 px-4 md:px-10">
         {/* Sección de la imagen de Grupo Frava */}
         <div className="flex flex-col items-center justify-center space-y-4 md:flex-1">
