@@ -1,110 +1,105 @@
 /* Navbar.css */
+
 nav {
-    position: fixed;
-    width: calc(100% - 300px);
-    top: 0;
-    z-index: 3;
-    left: 300px;
-  }
-  
-  nav ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-  }
-  
-  nav li {
-    padding: 0.8em;
-    text-align: center;
-    transition: all 0.2s;
-  }
-  
-  nav a {
-    color: #FFF;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  nav a:hover {
-    color: #DDD;
-  }
-  
-  #nav-bg {
-    background: #1F2937;
-    position: fixed;
-    height: 5em;
-    width: 100%;
-    top: 0;
-    z-index: 1;
-  }
-  
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+nav li {
+  padding: 0.8em;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+nav a {
+  color: #FFF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #DDD;
+}
+
+#nav-bg {
+  background: #1F2937;
+  position: fixed;
+  height: 5em;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu.open {
+  display: flex;
+  flex-direction: column;
+  background-color: #1F2937; /* Fondo del menú desplegable */
+  position: absolute;
+  top: 5em; /* Ajusta según la altura de tu nav */
+  right: 0;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 1em;
+  z-index: 9;
+}
+
+.menu li {
+  margin: 0.5em 0;
+}
+
+.menu li a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #BBB;
+}
+
+@media (max-width: 768px) {
   .menu-icon {
-    display: none;
-    font-size: 2em;
-    cursor: pointer;
-    color: #FFF;
-    position: absolute;
-    right: 10px; /* Separación de 10 px desde el lado derecho */
-    top: 0.7em; /* Ajusta la posición vertical */
-    z-index: 10; /* Asegura que esté por encima del resto del contenido */
-  }
-  
-  .menu {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .menu.open {
     display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  nav ul {
     flex-direction: column;
-    background-color: #1F2937; /* Fondo del menú desplegable */
-    position: absolute;
-    top: 5em; /* Ajusta según la altura de tu nav */
-    right: 0; /* Hace que el menú se alinee al lado derecho */
-    width: 200px; /* Ajusta el ancho del menú */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
-    padding: 1em;
-    z-index: 9; /* Asegura que esté por encima del resto del contenido */
+    align-items: flex-start;
   }
-  
-  .menu li {
-    margin: 0.5em 0; /* Espaciado entre elementos */
+
+  nav li {
+    padding: 0.5em 0;
   }
-  
-  .menu li a {
-    color: #FFF; /* Color del texto */
-    text-decoration: none;
-    font-size: 1.1em; /* Ajusta el tamaño de la fuente */
-    transition: color 0.3s;
-  }
-  
-  .menu li a:hover {
-    color: #BBB; /* Cambio de color al pasar el mouse */
-  }
-  
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: block;
-    }
-  
-    .menu {
-      display: none;
-    }
-  
-    .menu.open {
-      display: block;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    nav li {
-      padding: 0.5em 0;
-    }
-  }
-  
+}
