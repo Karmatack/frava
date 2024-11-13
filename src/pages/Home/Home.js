@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ClientsCarousel from '../../components/Carrousel/Carrousel';
+import { FaBalanceScale, FaHandshake, FaUsers, FaChartLine } from 'react-icons/fa';
 
 function Home() {
   // Inicializamos AOS para las animaciones de scroll
@@ -10,30 +11,23 @@ function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="bg-gray-50 text-gray-800">
       {/* Sección "Sobre nosotros" */}
-      <section id="about" className="py-20 text-center">
+      <section id="about" className="py-20 text-center bg-white">
         <div className="container mx-auto" data-aos="fade-up">
-          <h2 className="text-4xl font-bold mb-12 text-gray-800">Sobre nosotros</h2>
+          <h2 className="text-4xl font-bold mb-12 text-[#1F2937]">Sobre nosotros</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:-translate-y-2">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Experiencia</h3>
-              <p className="text-lg text-gray-600">
-                Contamos con un equipo de expertos con amplia experiencia en contabilidad, finanzas, laboral, tributario y administrativo.
-              </p>
-            </div>
-            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:-translate-y-2">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Compromiso</h3>
-              <p className="text-lg text-gray-600">
-                Nos comprometemos a brindar un servicio personalizado y de alta calidad a nuestros clientes.
-              </p>
-            </div>
-            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:-translate-y-2">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Confianza</h3>
-              <p className="text-lg text-gray-600">
-                Construimos relaciones duraderas basadas en la confianza y la transparencia.
-              </p>
-            </div>
+            {[
+              { title: "Experiencia", icon: <FaUsers />, text: "Contamos con un equipo de expertos con amplia experiencia en contabilidad, finanzas, laboral, tributario y administrativo." },
+              { title: "Compromiso", icon: <FaHandshake />, text: "Nos comprometemos a brindar un servicio personalizado y de alta calidad a nuestros clientes." },
+              { title: "Confianza", icon: <FaBalanceScale />, text: "Construimos relaciones duraderas basadas en la confianza y la transparencia." },
+            ].map((item, index) => (
+              <div key={index} className="bg-[#1F2937] bg-opacity-90 text-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2">
+                <div className="text-yellow-400 text-5xl mb-4">{item.icon}</div>
+                <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
+                <p className="text-lg">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -41,61 +35,71 @@ function Home() {
       {/* Sección "Servicios" */}
       <section id="services" className="py-20 text-center bg-gray-50">
         <div className="container mx-auto" data-aos="fade-up">
-          <h2 className="text-4xl font-bold mb-12 text-gray-800">Servicios que ofrecemos</h2>
+          <h2 className="text-4xl font-bold mb-12 text-[#1F2937]">Servicios que ofrecemos</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Contabilidad</h3>
-              <p className="text-lg text-gray-600">Contabilidad general</p>
-              <p className="text-lg text-gray-600">Contabilidad de costos</p>
-              <p className="text-lg text-gray-600">Contabilidad financiera</p>
-            </div>
-            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Impuestos</h3>
-              <p className="text-lg text-gray-600">Declaración de impuestos</p>
-              <p className="text-lg text-gray-600">Planificación fiscal</p>
-              <p className="text-lg text-gray-600">Asesoría fiscal</p>
-            </div>
-            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Auditoría</h3>
-              <p className="text-lg text-gray-600">Auditoría financiera</p>
-              <p className="text-lg text-gray-600">Auditoría interna</p>
-              <p className="text-lg text-gray-600">Revisión de estados financieros</p>
-            </div>
+            {[
+              {
+                title: "Contabilidad",
+                items: ["Contabilidad general", "Contabilidad de costos", "Contabilidad financiera"],
+                icon: <FaChartLine />,
+              },
+              {
+                title: "Impuestos",
+                items: ["Declaración de impuestos", "Planificación fiscal", "Asesoría fiscal"],
+                icon: <FaBalanceScale />,
+              },
+              {
+                title: "Auditoría",
+                items: ["Auditoría financiera", "Auditoría interna", "Revisión de estados financieros"],
+                icon: <FaHandshake />,
+              },
+            ].map((service, index) => (
+              <div key={index} className="bg-[#1F2937] bg-opacity-90 text-white rounded-lg p-8 shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
+                <div className="text-yellow-400 text-5xl mb-4">{service.icon}</div>
+                <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+                {service.items.map((item, idx) => (
+                  <p key={idx} className="text-lg border-b border-gray-400 pb-1">{item}</p>
+                ))}
+              </div>
+            ))}
           </div>
 
-          <h2 className="text-4xl font-bold mt-16 mb-12 text-gray-800">Áreas de especialización</h2>
+          <h2 className="text-4xl font-bold mt-16 mb-12 text-[#1F2937]">Áreas de especialización</h2>
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105" data-aos="zoom-in">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Empresas en general</h3>
-              <p className="text-lg text-gray-600">
-                Brindamos soluciones personalizadas para el crecimiento y la gestión financiera de las PYMES.
-              </p>
-            </div>
-            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105" data-aos="zoom-in" data-aos-delay="100">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Comercio electrónico</h3>
-              <p className="text-lg text-gray-600">
-                Apoyamos a empresas online con la gestión de sus operaciones y la optimización fiscal.
-              </p>
-            </div>
-            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Organizaciones sin fines de lucro</h3>
-              <p className="text-lg text-gray-600">
-                Ayudamos a las ONG a cumplir con sus obligaciones contables y fiscales.
-              </p>
-            </div>
-            <div className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105" data-aos="zoom-in" data-aos-delay="300">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Profesionales independientes</h3>
-              <p className="text-lg text-gray-600">
-                Ofrecemos soluciones contables y fiscales para autónomos y profesionales.
-              </p>
-            </div>
+            {[
+              {
+                title: "Empresas en general",
+                description: "Brindamos soluciones personalizadas para el crecimiento y la gestión financiera de las PYMES.",
+                icon: <FaUsers />,
+              },
+              {
+                title: "Comercio electrónico",
+                description: "Apoyamos a empresas online con la gestión de sus operaciones y la optimización fiscal.",
+                icon: <FaChartLine />,
+              },
+              {
+                title: "Organizaciones sin fines de lucro",
+                description: "Ayudamos a las ONG a cumplir con sus obligaciones contables y fiscales.",
+                icon: <FaBalanceScale />,
+              },
+              {
+                title: "Profesionales independientes",
+                description: "Ofrecemos soluciones contables y fiscales para autónomos y profesionales.",
+                icon: <FaHandshake />,
+              },
+            ].map((area, index) => (
+              <div key={index} className="bg-gray-200 bg-opacity-20 rounded-lg p-8 shadow-md hover:shadow-lg transition-transform transform hover:scale-105" data-aos="zoom-in" data-aos-delay={`${index * 100}`}>
+                <div className="text-[#1F2937] text-5xl mb-4">{area.icon}</div>
+                <h3 className="text-2xl font-semibold mb-4 text-[#1F2937]">{area.title}</h3>
+                <p className="text-lg text-gray-600">{area.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Sección "Clientes" */}
       <section id="clients" className="py-20 bg-white">
-        
         <ClientsCarousel />
       </section>
     </main>

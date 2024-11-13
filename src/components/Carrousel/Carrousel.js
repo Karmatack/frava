@@ -1,11 +1,17 @@
-import React from 'react';
+// Carrousel.js (src/components/Carrousel/Carrousel.js)
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-function ClientsCarousel() {
+function Carrousel() {
   const logos = require.context('../../assets/companylogo', false, /\.webp$/);
   const logoArray = logos.keys().map(logos);
-
-  // Duplica el array de logos para que el carrusel sea continuo
   const duplicatedLogos = [...logoArray, ...logoArray];
+
+  useEffect(() => {
+    // Asegura que AOS se inicialice cada vez que el carrusel se carga
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
     <div className="container mx-auto text-center bg-white" data-aos="fade-up">
@@ -13,7 +19,7 @@ function ClientsCarousel() {
       <div className="overflow-hidden relative w-full bg-white">
         <div
           className="flex animate-scroll"
-          style={{ width: `${duplicatedLogos.length * 20}%` }} 
+          style={{ width: `${duplicatedLogos.length * 20}%` }}
         >
           {duplicatedLogos.map((logo, index) => (
             <div key={index} className="mx-4 flex-shrink-0">
@@ -30,4 +36,4 @@ function ClientsCarousel() {
   );
 }
 
-export default ClientsCarousel;
+export default Carrousel;
