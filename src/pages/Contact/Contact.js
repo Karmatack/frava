@@ -4,6 +4,7 @@ import ClientsCarousel from "../../components/Carrousel/Carrousel";
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
+    empresa: "", // Campo opcional de empresa
     phone: "",
     email: "",
     message: "",
@@ -132,6 +133,22 @@ function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  className="w-full border-2 border-[#1F2937] focus:border-[#1F2937] outline-none p-2 text-black rounded"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="empresa"
+                  className="block font-semibold mb-1 text-[#1F2937]"
+                >
+                  Empresa(opcional)
+                </label>
+                <input
+                  type="text"
+                  id="empresa"
+                  value={formData.empresa}
+                  onChange={handleChange}
                   className="w-full border-2 border-[#1F2937] focus:border-[#1F2937] outline-none p-2 text-black rounded"
                 />
               </div>
